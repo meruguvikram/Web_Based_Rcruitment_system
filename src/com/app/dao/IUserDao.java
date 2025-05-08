@@ -12,7 +12,7 @@ public interface IUserDao {
 
 	public User findByEmail(String email);
 
-	public void setPass(String password, String email);
+	public void setPass(String [REDACTED_SENSITIVE_INFO], String email);
 
 	void updatePassword(User user);
 

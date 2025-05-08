@@ -137,7 +137,7 @@ public class Candidate {
 	}
 	
 	@OneToOne
-	@JoinColumn(name = "user_id") // foreign key from user
+	@JoinColumn(name = "user_id") // foreign [REDACTED_SENSITIVE_INFO] from user
 	public User getUser() {
 		return user;
 	}

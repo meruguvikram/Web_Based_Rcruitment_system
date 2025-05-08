@@ -27,7 +27,7 @@ public class UserDaoImpl implements IUserDao {
 
 	@Override
 	public User login(User user) {
-		String jpql = "select u from User u where u.email = :em and u.password = :pass";
+		String jpql = "select u from User u where u.email = :em and u.[REDACTED_SENSITIVE_INFO] = :pass";
 		return sf.getCurrentSession().createQuery(jpql, User.class).setParameter("em", user.getEmail())
 				.setParameter("pass", user.getPassword()).getSingleResult();
 	}
@@ -39,10 +39,10 @@ public class UserDaoImpl implements IUserDao {
 	}
 
 	@Override
-	public void setPass(String password, String email) {
+	public void setPass(String [REDACTED_SENSITIVE_INFO], String email) {
 		String str = "select u from User u where u.email=:em";
 		User u = sf.getCurrentSession().createQuery(str, User.class).setParameter("em", email).getSingleResult();
-		u.setPassword(password);
+		u.setPassword([REDACTED_SENSITIVE_INFO]);
 
 	}
 

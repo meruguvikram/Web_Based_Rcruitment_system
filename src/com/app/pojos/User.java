@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "user")
 public class User {
 	private Integer userId;
-	private String name, email, password, mobile;
+	private String name, email, [REDACTED_SENSITIVE_INFO], mobile;
 	private UserRole type;
 	private int otp;
 	// from candidate for one to one relation with user and candidate
@@ -27,18 +27,18 @@ public class User {
 		System.out.println("in user ctor");
 	}
 
-	public User(String password, int otp) {
+	public User(String [REDACTED_SENSITIVE_INFO], int otp) {
 		super();
-		this.password = password;
+		this.[REDACTED_SENSITIVE_INFO] = [REDACTED_SENSITIVE_INFO];
 		this.otp = otp;
 	}
 	
 	
-	public User(String name, String email, String password, String mobile, UserRole type) {
+	public User(String name, String email, String [REDACTED_SENSITIVE_INFO], String mobile, UserRole type) {
 		super();
 		this.name = name;
 		this.email = email;
-		this.password = password;
+		this.[REDACTED_SENSITIVE_INFO] = [REDACTED_SENSITIVE_INFO];
 		this.mobile = mobile;
 		this.type = type;
 	}
@@ -51,12 +51,12 @@ public class User {
 		this.mobile = mobile;
 	}
 
-	public User(Integer userId, String name, String email, String password, String mobile, UserRole type) {
+	public User(Integer userId, String name, String email, String [REDACTED_SENSITIVE_INFO], String mobile, UserRole type) {
 		super();
 		this.userId = userId;
 		this.name = name;
 		this.email = email;
-		this.password = password;
+		this.[REDACTED_SENSITIVE_INFO] = [REDACTED_SENSITIVE_INFO];
 		this.mobile = mobile;
 		this.type = type;
 	}
@@ -92,11 +92,11 @@ public class User {
 
 	@Column(nullable = false)
 	public String getPassword() {
-		return password;
+		return [REDACTED_SENSITIVE_INFO];
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String [REDACTED_SENSITIVE_INFO]) {
+		this.[REDACTED_SENSITIVE_INFO] = [REDACTED_SENSITIVE_INFO];
 	}
 
 	@Enumerated(EnumType.STRING)

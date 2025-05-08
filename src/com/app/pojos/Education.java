@@ -55,7 +55,7 @@ public class Education
 		this.passYear = passYear;
 	}
 	@ManyToOne
-	@JoinColumn(name="resume_id") //foreign key from candidate
+	@JoinColumn(name="resume_id") //foreign [REDACTED_SENSITIVE_INFO] from candidate
 	public Candidate getCandidate() {
 		return candidate;
 	}

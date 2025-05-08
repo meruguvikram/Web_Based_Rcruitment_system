@@ -14,7 +14,7 @@
 	class="org.apache.commons.dbcp2.BasicDataSource"
 		p:driverClassName="${jdbc.driver}" p:url="${jdbc.url}" 
 		p:username="${jdbc.username}"
-		p:password="${jdbc.password}" 
+		p:[REDACTED_SENSITIVE_INFO]="${jdbc.[REDACTED_SENSITIVE_INFO]}" 
 		p:initialSize="1" p:maxTotal="2"
 		destroy-method="close">
 	</bean>

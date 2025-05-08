@@ -84,7 +84,7 @@ public class UserController {
 
 				otp = service.generateOtp();
 				System.out.println(otp);
-				String msg = "Your one time password(OTP) is = " + otp;
+				String msg = "Your one time [REDACTED_SENSITIVE_INFO](OTP) is = " + otp;
 				SimpleMailMessage mailMessage = new SimpleMailMessage();
 				mailMessage.setTo(user.getEmail());
 				mailMessage.setSubject("One Time Password");
@@ -106,7 +106,7 @@ public class UserController {
 	}
 
 	@PostMapping("/setpass")
-	public ResponseEntity<?> setpassword(@RequestBody User u) {
+	public ResponseEntity<?> set[REDACTED_SENSITIVE_INFO](@RequestBody User u) {
 
 		System.out.println(u);
 		System.out.println("mail " + user.getEmail() + " otp " + otp);
