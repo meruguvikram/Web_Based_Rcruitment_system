@@ -18,12 +18,12 @@
         <property name="host" value="smtp.gmail.com" />
         <property name="port" value="587" />
         <property name="username" value="sandipnaikwade24@gmail.com"/>
-        <property name="password" value="sandip123"/>
+        <property name="[REDACTED_SENSITIVE_INFO]" value="sandip123"/>
         <property name="javaMailProperties">
             <props>
-                <prop key="mail.transport.protocol">smtp</prop>
-                <prop key="mail.smtp.auth">true</prop>
-                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop [REDACTED_SENSITIVE_INFO]="mail.transport.protocol">smtp</prop>
+                <prop [REDACTED_SENSITIVE_INFO]="mail.smtp.[REDACTED_SENSITIVE_INFO]">true</prop>
+                <prop [REDACTED_SENSITIVE_INFO]="mail.smtp.starttls.enable">true</prop>
             </props>
         </property>
 	</bean>
